@@ -1,7 +1,7 @@
 # src/app.py
 import sys
 import argparse
-from pokemon_api import get_pokemon_data, suggest_names
+from src.pokemon_api import get_pokemon_data, suggest_names
 
 
 RESET = "\033[0m"
