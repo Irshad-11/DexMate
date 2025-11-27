@@ -11,11 +11,9 @@ jobs:
   build-test-package-deploy:
     runs-on: ubuntu-latest
     steps:
-      # Stage: Source (checkout)
       - name: Checkout source
         uses: actions/checkout@v4
 
-      # Stage: Build - install deps & create artifact
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -26,23 +24,20 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Create build artifact (zip)
+      - name: Create build artifact
         run: |
           zip -r build.zip src -x "*.pyc" "__pycache__/*"
 
-      # Stage: Test
       - name: Run unit tests
         run: |
           pytest -q
 
-      # Stage: Package/Artifact (upload)
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: pokemon-build
           path: build.zip
 
-      # Stage: Simulated Deploy
       - name: Simulated Deploy - download artifact and use secret
         uses: actions/download-artifact@v4
         with:
@@ -55,5 +50,4 @@ jobs:
         run: |
           echo "Downloaded files:"
           ls -la ./downloaded
-          # Print a deploy message that includes the secret (GitHub will mask it in logs)
           echo "Deployment using API Key: $DEPLOY_API_KEY"
