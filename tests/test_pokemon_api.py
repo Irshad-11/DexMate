@@ -1,9 +1,9 @@
-# tests/test_pokemon_api.py
+
 import pytest
 from unittest.mock import patch, MagicMock
 from src.pokemon_api import get_pokemon_data, suggest_names
 
-# Sample minimal JSON shape returned by PokeAPI
+
 SAMPLE_API_RESPONSE = {
     "name": "pikachu",
     "height": 4,

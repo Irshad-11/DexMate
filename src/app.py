@@ -1,6 +1,7 @@
-# src/app.py
+
 import sys
 import argparse
+import os
 from src.pokemon_api import get_pokemon_data, suggest_names
 
 
@@ -13,6 +14,7 @@ CYAN = "\033[1;36m"
 MAGENTA = "\033[1;35m"
 
 def pretty_print(p):
+    os.system("cls")
     print(f"{CYAN}Name:{RESET} {BOLD}{p['name'].title()}{RESET}")
     print(f"{YELLOW}Height:{RESET} {p['height']}")
     print(f"{YELLOW}Weight:{RESET} {p['weight']}")

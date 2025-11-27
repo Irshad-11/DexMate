@@ -1,10 +1,10 @@
-# src/pokemon_api.py
+
 import requests
 from typing import Optional, Dict, Any
 
 POKEAPI_BASE = "https://pokeapi.co/api/v2/pokemon/"
 
-# A small static suggestion list if user types invalid name.
+
 SUGGESTIONS = ["pikachu", "bulbasaur", "charmander", "squirtle", "eevee", "snorlax"]
 
 def get_pokemon_data(name: str, timeout: float = 5.0) -> Optional[Dict[str, Any]]:
@@ -25,7 +25,7 @@ def get_pokemon_data(name: str, timeout: float = 5.0) -> Optional[Dict[str, Any]
         return None
 
     raw = r.json()
-    # parse required fields
+
     data = {
         "name": raw.get("name"),
         "height": raw.get("height"),
