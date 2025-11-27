@@ -45,4 +45,3 @@ def test_suggest_names_basic():
     assert isinstance(s, list)
     assert len(s) > 0
 
-# Sample edit for Demonstration

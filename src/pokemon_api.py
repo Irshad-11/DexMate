@@ -47,4 +47,3 @@ def suggest_names(prefix: Optional[str] = None, max_suggestions: int = 5):
         filtered = SUGGESTIONS[:max_suggestions]
     return filtered[:max_suggestions]
 
-# Sample edit for Demonstration
