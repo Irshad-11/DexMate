@@ -57,9 +57,3 @@
   <li><strong>PokeAPI:</strong> <a href="https://pokeapi.co/">pokeapi.co</a></li>
   <li><strong>Author:</strong> Irshad Hossain</li>
 </ul>
-
-<h2>Contact</h2>
-<ul>
-  <li><strong>Email:</strong> &lt;YOUR_EMAIL&gt;</li>
-  <li><strong>Portfolio/GitHub:</strong> &lt;YOUR_LINK&gt;</li>
-</ul>
