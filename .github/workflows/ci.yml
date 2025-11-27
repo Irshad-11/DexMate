@@ -1,5 +1,5 @@
 
-name: CI Pipeline - DEXMATE
+name: CI/CD Pipeline - DEXMATE
 
 on:
   push:
@@ -40,7 +40,7 @@ jobs:
           name: pokemon-build
           path: build.zip
 
-      - name: Simulated Deploy - download artifact and use secret
+      - name: Simulated Deploy
         uses: actions/download-artifact@v4
         with:
           name: pokemon-build
